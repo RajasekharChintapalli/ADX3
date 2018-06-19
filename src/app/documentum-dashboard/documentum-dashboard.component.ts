@@ -19,7 +19,7 @@ export class DocumentumDashboardComponent implements OnInit {
                 {img:'assets/img/rm.png', bgColor: '#a2156e', appName:'RM' , routeUrl:'/fileUpload'}
              ];
   constructor() { }
-
+  name:string = null;
   ngOnInit() {
   }
 
