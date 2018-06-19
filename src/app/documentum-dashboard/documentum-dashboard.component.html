@@ -1,0 +1,26 @@
+<div>     
+    <div class="container-fluid row" style="padding: 0.5%;background-color: #e9ecef;">
+      <div class="col-md-1" style="text-align:  center;"><img src="assets/img/loesungen-color.svg" style="width: 80px;"></div>
+      <div  class="col-md-11" style="font-family:  sans-serif;  font-size: 22px; padding: 20px 0px;">Document Management System</div>
+    </div>
+    <div style="margin: 1% 26%;" class="inner-addon right-addon">
+      <i class="glyphicon glyphicon-search" style="font-size:  large;"></i>
+      <input class="form-control input-lg textFocus" placeholder="Enter keyword to search..." [(ngModel)]='name' type="text" style="font-size: 18px;box-shadow: 0 0 0 0 rgba(0,123,255,.25); text-align: center">
+    </div>
+    
+    <nav style="text-align: center; margin-top: 11%;">
+      <div *ngFor="let rdop of rdopList" class="circle-container" style="display: inline-block;">
+        <div class="outer-ring"></div>
+        <div class="circle">
+          <div class="front" [ngStyle]="{'background-color':rdop.bgColor}" >
+            <img [src]="rdop.img" style="margin: 20%;">
+          </div>
+          <div class="back gradient" style="padding-top: 35%;">
+            <a routerLink="{{rdop.routeUrl}}">{{rdop.appName}}</a>
+          </div>
+        </div>
+      </div>
+    </nav>    
+</div>
+
+

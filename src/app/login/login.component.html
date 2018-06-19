@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<form #loginForm="ngForm" (ngSubmit)="login()">
+  <div class="svgContainer">
+    <div>
+        <img style="width: 100%; margin-top: 4%;" src="assets/img/loesungen-color.svg">
+    </div>
+  </div>
+
+  <div class="inputGroup inputGroup1">
+    <label for="email1">Email</label>
+    <input type="text" id="email" name="email" [(ngModel)]="email" class="email" maxlength="256" required/>
+    <span class="indicator"></span>
+  </div>
+  <div class="inputGroup inputGroup2">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password" class="password" required/>
+  </div>
+  <div class="inputGroup inputGroup3">
+    <button id="login" type="submit" [disabled]="loginForm.invalid">Log in</button>
+  </div>
+</form>
